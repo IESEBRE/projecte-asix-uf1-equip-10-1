@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import  java.util.Random;
 public class Animal {
     public static void main(String[] args) {
 
@@ -38,7 +39,7 @@ public class Animal {
                 Scanner jc = new Scanner(System.in);
                 char joc = jc.next().charAt(0);
                 if (joc == 'a')
-                    System.out.println("Among Us");
+                    System.out.println("Nerfejar a Aurelion Sol");
                 else if (joc == 'b')
                     System.out.println("A la nova season del League of Legends");
                 else if (joc == 'c')
@@ -80,7 +81,30 @@ public class Animal {
 
             case 5:
                 //Problema 13
+                //Definició de les variables de la onomatopeia
+                //Problema 13
+                //Definició de les variables de la onomatopeia
+                Scanner ono = new Scanner(System.in);
+                Random r = new Random();
+                int numloop = 0;
+                while (numloop != 10) {
+                    char variable1 = ono.next().charAt(0);
+                    char variable2 = (char) (r.nextInt(26) + 'a');
+                    char variable3 = ono.next().charAt(0);
 
+                    System.out.println("TU:" + variable1);
+                    System.out.println("ELL: " + variable2);
+                    System.out.println("TU: " + variable3);
+
+                    String str = new StringBuilder().append(variable1).append(variable2).toString();
+                    char vocal = str.charAt(1);
+
+                    if (vocal=='a' || vocal=='e' || vocal=='i' || vocal=='o' || vocal=='u')
+                        System.out.println(str+ " es una onomatopeia");
+                    else
+                        System.out.println(str+ "no es una onomatopeia");
+                    ++numloop;
+                }
                 break;
 
             case 6:
