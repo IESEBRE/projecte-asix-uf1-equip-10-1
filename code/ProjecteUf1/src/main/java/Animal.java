@@ -1,7 +1,11 @@
 import java.util.Scanner;
 import  java.util.Random;
 public class Animal {
-    public static void main(String[] args) {
+    //Constructor de la branca Animal
+    void Animal() {}
+    boolean talking() {
+        boolean finish = false;
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Questionari");
         System.out.println("1. Quin tipus d'animal ets?");
@@ -13,6 +17,7 @@ public class Animal {
         System.out.println("5. Juguem a fer onomatopeies?");
         System.out.println("6. Posa-li un nom");
         System.out.println("7. Podríes recordar-me la nostra conversa?");
+        System.out.println("8. Vols sortir de la conversa?");
 
         int opcio = sc.nextInt();
         switch (opcio) {
@@ -23,7 +28,7 @@ public class Animal {
                 char animal = ani.next().charAt(0);
                 int difG = 'g' - animal;
                 int difS = 's' - animal;
-                //Definim els condiconals en funcions a la posició numerica dels caracters alfanumerics.
+                //Definim els condiconals en funcion a la posició numerica en valor Unicode dels caracters alfanumerics.
                 if (difG >= -3 || animal <= 'g')
                     System.out.println("Gos");
                 else if (difS <= -3 || animal >= 's')
@@ -70,8 +75,8 @@ public class Animal {
                 char caracter = car.next().charAt(0);
                 //Creem una variable que iteri el nostre bucle, que en aquest cas prendra el valor minim del nostre rang
                 char iterador = 'a';
-                /* Definim finalment el nostre parametre que permeti fer el punt mig al bucle i finalment els caracters
-                que s'anirant imprimint a mesura que el bucle avança. */
+             /* Definim finalment el nostre parametre que permeti fer el punt mig al bucle i finalment els caracters
+             que s'anirant imprimint a mesura que el bucle avança. */
                 char counter = (char) (((caracter - 'a') / 2));
                 char finalchar = (char) (counter + 'a');
                 /*Creem un bucle per tal d'anar sumant '1' a la variable minima per tal d'aumentar d'un en un el minim
@@ -82,17 +87,27 @@ public class Animal {
                 }
                 System.out.printf(String.valueOf(finalchar + ","));
                 break;
-            case 4:
+          /*  case 4:
                 //Problema 12
                 Scanner uni = new Scanner(System.in);
                 System.out.println("Introdueix dos caràcters: ");
                 //Iniciem les nostres variables a introduïr quan iniciem el programa.
-                char a = uni.next().charAt(0);
-                char b = uni.next().charAt(0);
-                char max = 'a';
-                char min = 'z';
-                int iterator = 0;
-                break;
+                char char1 = uni.next().charAt(0);
+                char char2 = uni.next().charAt(0);
+                char b = char2;
+                char resultat;
+                while (char1 <= char2) {
+                    resultat = char1 + b;
+                    while (resultat != char1) {
+                        System.out.println(resultat + "  ");
+                    }
+                    b--;
+                    resultat = char1 + b;
+                }
+                char1++;
+                b = char2;
+                System.out.println("");
+                break; */
 
 
             case 5:
@@ -107,71 +122,52 @@ public class Animal {
                 int numloop = 0;
                 while (numloop != 10) {
                     char variable1 = ono.next().charAt(0);
-                    char variable2 = (char) (r.nextInt(26) + 'a');
-
                     System.out.println("TU:" + variable1);
+                    char variable2 = (char) (r.nextInt(26) + 'a');
                     System.out.println("ELL: " + variable2);
-
+                    ++numloop;
                     String str = new StringBuilder().append(variable1).append(variable2).append(variable1).toString();
                     char vocal = str.charAt(1);
 
                     if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o' || vocal == 'u')
-                        System.out.println("La combinació "+str + " es una onomatopeia");
+                        System.out.println("La combinació " + str + " es una onomatopeia");
                     else
-                        System.out.println("La combinació "+str + " no es una onomatopeia");
-                    ++numloop;
+                        System.out.println("La combinació " + str + " no es una onomatopeia");
                 }
                 break;
 
-                    case 6:
-                        //Problema 14
-                        Scanner nm = new Scanner(System.in);
-                        String nom;
-                        nom = nm.nextLine();
-                        System.out.println(nom + " Grácies. M'agrada aquest nom");
-                        break;
-
-                    case 7:
-                        //Problema 15
-                        //Nom + tipus animal + caràcter favorit + nombre onomatopies
-                        System.out.println(animal);
-                        System.out.println(caracter);
-                        System.out.println();
-                        break;
-
-                    default:
-                        System.out.println("ERROR 404, option not found");
-                        break;
-                }
+            case 6:
+                //Problema 14
+                Scanner nm = new Scanner(System.in);
+                String nom;
+                nom = nm.nextLine();
+                System.out.println(nom + " Grácies. M'agrada aquest nom");
+                break;
         }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*Constructor
-    void Animal () {}
-
-    boolean talking () {
-        System.out.println("bup bup");
         return true;
     }
-    }
+}
 
-     */
+
+            /*case 7:
+                //Problema 15
+                //Nom + tipus animal + caràcter favorit + sombre onomatopies
+                System.out.println(animal);
+                System.out.println(caracter);
+                System.out.println(onomatopeia);
+                break;
+
+            case 8:
+                System.out.println("Tria SI o NO");
+                Scanner conv = new Scanner(System.in);
+                    String conversa = conv.nextLine();
+                if (conversa.equals ('SI')){
+                    return true;
+                    }
+                if (conversa.equals ('NO')){
+                    break;
+                    }
+
+            default:
+                System.out.println("ERROR 404, option not found");
+                break;*/
