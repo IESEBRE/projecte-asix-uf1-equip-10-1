@@ -84,10 +84,11 @@ public class Animal {
                 while (iterador != (char) (counter + 'a')) {
                     System.out.print(iterador + ",");
                     ++iterador;
+
                 }
                 System.out.printf(String.valueOf(finalchar + ","));
                 break;
-          /*  case 4:
+            case 4:
                 //Problema 12
                 Scanner uni = new Scanner(System.in);
                 System.out.println("Introdueix dos caràcters: ");
@@ -95,7 +96,7 @@ public class Animal {
                 char char1 = uni.next().charAt(0);
                 char char2 = uni.next().charAt(0);
                 char b = char2;
-                char resultat;
+                int resultat;
                 while (char1 <= char2) {
                     resultat = char1 + b;
                     while (resultat != char1) {
@@ -107,7 +108,7 @@ public class Animal {
                 char1++;
                 b = char2;
                 System.out.println("");
-                break; */
+                break;
 
 
             case 5:
@@ -145,7 +146,7 @@ public class Animal {
                     System.out.println("ELL: "+ variable6);
 
                     String str2 = new StringBuilder().append(variable4).append(variable5).append(variable6).toString();
-                    char vocal2 = str.charAt(1);
+                    char vocal2 = str2.charAt(1);
 
                     if (vocal2 == 'a' || vocal2 == 'e' || vocal2 == 'i' || vocal2 == 'o' || vocal2 == 'u')
                         System.out.println("La combinació " + str + " es una onomatopeia");
