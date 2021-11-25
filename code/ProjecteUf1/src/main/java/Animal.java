@@ -118,22 +118,42 @@ public class Animal {
                 Scanner ono = new Scanner(System.in);
                 Random r = new Random();
                 System.out.println("Tria un caracter per formar una onomatopeia: ");
-
+                //Definim la variable per inciar el bucle i la condició per finalitzarlo
                 int numloop = 0;
-                while (numloop != 10) {
+                //En lloc de fer 3 variables i fer 10 cops el bucle, n'iniciem 6 i el fem només 5, aixi podem fer els torns correctament.
+                while (numloop != 5) {
                     char variable1 = ono.next().charAt(0);
                     System.out.println("TU:" + variable1);
                     char variable2 = (char) (r.nextInt(26) + 'a');
                     System.out.println("ELL: " + variable2);
-                    ++numloop;
-                    String str = new StringBuilder().append(variable1).append(variable2).append(variable1).toString();
+                    char variable3 = ono.next().charAt(0);
+                    System.out.println("TU: "+ variable3);
+
+                    String str = new StringBuilder().append(variable1).append(variable2).append(variable3).toString();
                     char vocal = str.charAt(1);
 
                     if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o' || vocal == 'u')
                         System.out.println("La combinació " + str + " es una onomatopeia");
                     else
                         System.out.println("La combinació " + str + " no es una onomatopeia");
+
+                    char variable4 = (char) (r.nextInt(26) + 'a');
+                    System.out.println("ELL: "+ variable4);
+                    char variable5 = ono.next().charAt(0);
+                    System.out.println("TU: "+ variable5);
+                    char variable6 = (char) (r.nextInt(26) + 'a');
+                    System.out.println("ELL: "+ variable6);
+
+                    String str2 = new StringBuilder().append(variable4).append(variable5).append(variable6).toString();
+                    char vocal2 = str.charAt(1);
+
+                    if (vocal2 == 'a' || vocal2 == 'e' || vocal2 == 'i' || vocal2 == 'o' || vocal2 == 'u')
+                        System.out.println("La combinació " + str + " es una onomatopeia");
+                    else
+                        System.out.println("La combinació " + str2 + " no es una onomatopeia");
+                    ++numloop;
                 }
+                System.out.println("Has format onomatopeies");
                 break;
 
             case 6:
