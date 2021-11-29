@@ -127,7 +127,7 @@ public class Animal {
 
                         if (vocal2 == 'a' || vocal2 == 'e' || vocal2 == 'i' || vocal2 == 'o' || vocal2 == 'u') {
                             System.out.println("La combinació " + str + " es una onomatopeia");
-
+                            ++contadoronomatopeies;
                         }
                         else
                             System.out.println("La combinació " + str2 + " no es una onomatopeia");
