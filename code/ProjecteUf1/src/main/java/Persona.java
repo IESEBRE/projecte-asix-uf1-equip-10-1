@@ -1,10 +1,9 @@
 import java.util.Scanner;
 import java.util.Random;
 public class Persona {
-
     void Persona() {}
-
     boolean talking() {
+        Scanner scanner = new Scanner(System.in);
         boolean finish = false;
 
         System.out.println("Qüestionari:");
@@ -16,6 +15,7 @@ public class Persona {
         System.out.println("    6. Posa-li un nom:");
         System.out.println("    7. Pots recordar-me la nostra conversa?");
         System.out.println("    8. Sortir");
+        do {
         Scanner sc = new Scanner(System.in);
         System.out.println("Opció:");
         int Opció = sc.nextInt();
@@ -37,7 +37,7 @@ public class Persona {
                         break;
                     } else if (numenter < 100) numenter += 2;
                     else numenter -= 4;
-                return true;
+                break;
 
             case 2:
                 Scanner esport = new Scanner(System.in);
@@ -76,7 +76,7 @@ public class Persona {
                         break;
 
                 }
-                return true;
+                break;
             case 3: {
                 Scanner preferit = new Scanner(System.in);
                 System.out.println("Dis-li un número màxim");
@@ -88,7 +88,7 @@ public class Persona {
                 }
                 System.out.print("... He escollit el " + x);
             }
-            return true;
+            break;
 
             case 4:
                 Scanner multiplicar = new Scanner(System.in);
@@ -110,12 +110,10 @@ public class Persona {
                     b = num2;
                     System.out.println("");
                 }
-
-                return true;
+                break;
 
 
             case 5:
-                Scanner scanner = new Scanner(System.in);
                 //Entrada de la IA
                 //Entrada normal
                 int entrada;
@@ -178,12 +176,26 @@ public class Persona {
                 System.out.println("Quin vols que sigui el meu nom?");
                 String nom = meunom.nextLine();
                 System.out.println("Gràcies! Magrada " + nom);
+                break;
+            case 7:
+                System.out.println("Esta opció encara no esta disponible");
+                break;
+
+            case 8:
+            //Execució de codi per finalitzar el switch
+            System.out.println("Tria SI o NO");
+            Scanner conv = new Scanner(System.in);
+            String conversa = conv.nextLine();
+            if (conversa.equals("SI")) {
                 return true;
+            }
+            if (conversa.equals("NO")) {
+                break;
+            }
 
         }
-        return false;
+        }
+        while (!finish);
+        return true;
     }
-
-
-    //Constructor
 }
