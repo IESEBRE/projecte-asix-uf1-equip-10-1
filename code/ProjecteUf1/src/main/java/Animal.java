@@ -55,12 +55,12 @@ public class Animal {
                     Scanner ani = new Scanner(System.in);
                     // Iniciem una variable 'animal' i definim un un rang entre caracters mitjançant operadors matematics.
                     animal = ani.next().charAt(0);
-                    int difG = 'G' - animal;
-                    int difS = 'S' - animal;
+                    int difG = 'g' - animal;
+                    int difS = 's' - animal;
 
-                    if (difG >= -3 || animal <= 'G')
+                    if (difG >= -3 || animal <= 'g')
                         System.out.println("Gos");
-                    else if (difS <= -3 || animal >= 'S')
+                    else if (difS <= -3 || animal >= 's')
                         System.out.println("Serp");
                     else System.out.println("Mono");
                     boolArray[0] = true;
@@ -75,25 +75,25 @@ public class Animal {
                     Scanner jc = new Scanner(System.in);
                     System.out.println("Tria el teu joc favorit:");
                     joc = jc.next().charAt(0);
-                    if (joc == 'A')
+                    if (joc == 'a')
                         System.out.println("Pilla-pilla");
-                    else if (joc == 'B')
+                    else if (joc == 'b')
                         System.out.println("Pilota");
-                    else if (joc == 'C')
+                    else if (joc == 'c')
                         System.out.println("Saltar");
-                    else if (joc == 'D')
+                    else if (joc == 'd')
                         System.out.println("Circuit");
-                    else if (joc == 'E')
+                    else if (joc == 'e')
                         System.out.println("Correr");
-                    else if (joc == 'F')
+                    else if (joc == 'f')
                         System.out.println("Dinamica");
-                    else if (joc == 'G')
+                    else if (joc == 'g')
                         System.out.println("Vols");
-                    else if (joc == 'H')
+                    else if (joc == 'h')
                         System.out.println("Amagar");
-                    else if (joc == 'I')
+                    else if (joc == 'i')
                         System.out.println("Cercar");
-                    else if (joc == 'J')
+                    else if (joc == 'j')
                         System.out.println("Estirar");
                     else
                         System.out.println("No es un joc!");
@@ -110,10 +110,10 @@ public class Animal {
                     // Iniciem la variable 'caracter' i un iterador per variar el bucle i els operadors indicats a l'enunciat.
                     caracter = car.next().charAt(0);
                     char iterador = 'A';
-                    char counter = (char) (((caracter - 'A') / 2));
-                    char finalchar = (char) (counter + 'A');
+                    char counter = (char) (((caracter - 'a') / 2));
+                    char finalchar = (char) (counter + 'a');
 
-                    while (iterador != (char) (counter + 'A')) {
+                    while (iterador != (char) (counter + 'a')) {
                         System.out.print(iterador + " ");
                         ++iterador;
                     }
@@ -220,7 +220,6 @@ public class Animal {
                         break;
                     }
             }
-
         }
         while (!finishA);
         return true;
