@@ -55,12 +55,12 @@ public class Animal {
                     Scanner ani = new Scanner(System.in);
                     // Iniciem una variable 'animal' i definim un un rang entre caracters mitjançant operadors matematics.
                     animal = ani.next().charAt(0);
-                    int difG = 'g' - animal;
-                    int difS = 's' - animal;
+                    int difG = 'G' - animal;
+                    int difS = 'S' - animal;
 
-                    if (difG >= -3 || animal <= 'g')
+                    if (difG >= -3 || animal <= 'G')
                         System.out.println("Gos");
-                    else if (difS <= -3 || animal >= 's')
+                    else if (difS <= -3 || animal >= 'S')
                         System.out.println("Serp");
                     else System.out.println("Mono");
                     boolArray[0] = true;
@@ -75,25 +75,25 @@ public class Animal {
                     Scanner jc = new Scanner(System.in);
                     System.out.println("Tria el teu joc favorit:");
                     joc = jc.next().charAt(0);
-                    if (joc == 'a')
+                    if (joc == 'A')
                         System.out.println("Pilla-pilla");
-                    else if (joc == 'b')
+                    else if (joc == 'B')
                         System.out.println("Pilota");
-                    else if (joc == 'c')
+                    else if (joc == 'C')
                         System.out.println("Saltar");
-                    else if (joc == 'd')
+                    else if (joc == 'D')
                         System.out.println("Circuit");
-                    else if (joc == 'e')
+                    else if (joc == 'E')
                         System.out.println("Correr");
-                    else if (joc == 'f')
+                    else if (joc == 'F')
                         System.out.println("Dinamica");
-                    else if (joc == 'g')
+                    else if (joc == 'G')
                         System.out.println("Vols");
-                    else if (joc == 'h')
+                    else if (joc == 'H')
                         System.out.println("Amagar");
-                    else if (joc == 'i')
+                    else if (joc == 'I')
                         System.out.println("Cercar");
-                    else if (joc == 'j')
+                    else if (joc == 'J')
                         System.out.println("Estirar");
                     else
                         System.out.println("No es un joc!");
@@ -110,10 +110,10 @@ public class Animal {
                     // Iniciem la variable 'caracter' i un iterador per variar el bucle i els operadors indicats a l'enunciat.
                     caracter = car.next().charAt(0);
                     char iterador = 'A';
-                    char counter = (char) (((caracter - 'a') / 2));
-                    char finalchar = (char) (counter + 'a');
+                    char counter = (char) (((caracter - 'A') / 2));
+                    char finalchar = (char) (counter + 'A');
 
-                    while (iterador != (char) (counter + 'a')) {
+                    while (iterador != (char) (counter + 'A')) {
                         System.out.print(iterador + " ");
                         ++iterador;
                     }
@@ -150,26 +150,26 @@ public class Animal {
                     while (numloop != 5) {
                         char variable1 = ono.next().charAt(0);
                         System.out.println("TU:" + variable1);
-                        char variable2 = (char) (r.nextInt(26) + 'a');
+                        char variable2 = (char) (r.nextInt(26) + 'A');
                         System.out.println("ELL: " + variable2);
                         char variable3 = ono.next().charAt(0);
                         System.out.println("TU: " + variable3);
                         String str = new StringBuilder().append(variable1).append(variable2).append(variable3).toString();
                         char vocal = str.charAt(1);
-                        if (vocal == 'a' || vocal == 'e' || vocal == 'i' || vocal == 'o' || vocal == 'u') {
+                        if (vocal == 'A' || vocal == 'E' || vocal == 'I' || vocal == 'O' || vocal == 'U') {
                             System.out.println("La combinació " + str + " es una onomatopeia");
                             ++contadoronomatopeies;
                         } else
                             System.out.println("La combinació " + str + " no es una onomatopeia");
-                        char variable4 = (char) (r.nextInt(26) + 'a');
+                        char variable4 = (char) (r.nextInt(26) + 'A');
                         System.out.println("ELL: " + variable4);
                         char variable5 = ono.next().charAt(0);
                         System.out.println("TU: " + variable5);
-                        char variable6 = (char) (r.nextInt(26) + 'a');
+                        char variable6 = (char) (r.nextInt(26) + 'A');
                         System.out.println("ELL: " + variable6);
                         String str2 = new StringBuilder().append(variable4).append(variable5).append(variable6).toString();
                         char vocal2 = str2.charAt(1);
-                        if (vocal2 == 'a' || vocal2 == 'e' || vocal2 == 'i' || vocal2 == 'o' || vocal2 == 'u') {
+                        if (vocal2 == 'A' || vocal2 == 'E' || vocal2 == 'I' || vocal2 == 'O' || vocal2 == 'U') {
                             System.out.println("La combinació " + str + " es una onomatopeia");
                             ++contadoronomatopeies;
                         } else
