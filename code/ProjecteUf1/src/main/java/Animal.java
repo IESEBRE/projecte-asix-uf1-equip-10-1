@@ -118,7 +118,7 @@ public class Animal {
                         ++iterador;
                     }
                     // Fem un print tabulat per mostar tots els valors definits.
-                    System.out.printf(String.valueOf("...He triat el "+finalchar+"!"));
+                    System.out.printf(String.valueOf("...He triat el " + finalchar + "!"));
                     boolArray[2] = true;
                     break;
 
@@ -128,7 +128,24 @@ public class Animal {
                         break;
                     }
                     //Problema 12
-                    System.out.println("Aquesta opció encara esta en desenvolupament (Work In Progress)");
+                    char lletra1, lletra2;
+                    System.out.println("Disme una lletra de la A a la Z");
+                    Scanner ucv = new Scanner(System.in);
+                    lletra1 = ucv.next().charAt(0);
+                    System.out.println("Disme una segona lletra més gran que l'anterior dins del rang de la A a la Z");
+                    Scanner ucv2 = new Scanner(System.in);
+                    lletra2 = ucv2.next().charAt(0);
+
+                    if ((((lletra1 - 'A') + (lletra2 - 'A') + 'A') % 2 == 0) && (((lletra1 - 'A') + (lletra2 - 'A') + 'A') <= 'Z')) {
+                        for (int contador1 = lletra1; contador1 < lletra2; contador1++) {
+                            System.out.printf((char) (contador1) + "   ");
+                            for (int contador2 = lletra2; contador2 > contador1; contador2--) {
+                                System.out.printf((char) (contador2) + "   ");
+                            }
+                            System.out.println();
+                        }
+                    } else System.out.println("Valors incorrectes!!");
+
                     boolArray[3] = true;
                     break;
                 case "5":
