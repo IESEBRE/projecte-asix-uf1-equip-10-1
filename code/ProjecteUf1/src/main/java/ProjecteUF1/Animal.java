@@ -68,44 +68,44 @@ public class Animal {
                     //Problema 10
                     if (ordre[0] && ordre[1] == false) {
                         if (show) System.out.println("A que t'agrada jugar? ");
-                        String joc = sc.nextLine();
-                        if (joc.equals("A")) {
+                        char joc = sc.next().charAt(0);
+                        if (joc == 'A') {
                             System.out.println("Pilla-pilla");
                             jocs = "pilla-pilla";
                         }
-                        if (joc.equals("B")) {
+                        if (joc == 'B') {
                             System.out.println("Pilota");
                             jocs = "pilota";
                         }
-                        if (joc.equals("C")) {
+                        if (joc == 'C') {
                             System.out.println("Saltar");
                             jocs = "saltar";
                         }
-                        if (joc.equals("D")) {
+                        if (joc == 'D') {
                             System.out.println("Circuit");
                             jocs = "circuit";
                         }
-                        if (joc.equals("E")) {
+                        if (joc == 'E') {
                             System.out.println("Correr");
                             jocs = "correr";
                         }
-                        if (joc.equals("F")) {
+                        if (joc == 'F') {
                             System.out.println("Dinamica");
                             jocs = "dinamica";
                         }
-                        if (joc.equals("G")) {
+                        if (joc == 'G') {
                             System.out.println("Vols");
                             jocs = "vols";
                         }
-                        if (joc.equals("H")) {
+                        if (joc == 'H') {
                             System.out.println("Amagar");
                             jocs = "amagar";
                         }
-                        if (joc.equals("I")) {
+                        if (joc == 'I') {
                             System.out.println("Cercar");
                             jocs = "cercar";
                         }
-                        if (joc.equals("J")) {
+                        if (joc == 'J') {
                             System.out.println("Estirar");
                             jocs = "estirar";
                         }
