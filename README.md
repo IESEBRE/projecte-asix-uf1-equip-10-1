@@ -1,5 +1,7 @@
-# Plantilla projecte
+# Distribució de codi
 
-Posa la documentació dins la carpeta ./docs
+Alien - Aleix Carles
 
-Crea els teus projectes dins la carpeta ./code
+Animal - Hector Blanco
+
+Persona - Joan Boix
